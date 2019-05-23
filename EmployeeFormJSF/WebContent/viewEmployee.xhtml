@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:title><title>Employee Details</title></h:title>
+<h:body>
+Employee Name 	: #{employee.empname}<br/>
+Employee Age 	: #{employee.age}<br/>
+Employee Gender : 
+	<ui:repeat var="temp" value="${employee.gender}">#{temp}</ui:repeat>
+<br/>Employee Status :
+	<ui:repeat var="temp" value="${employee.status}">#{temp}</ui:repeat>
+Employee Preferred dept :
+<ul>
+	<ui:repeat var="temp" value="${employee.preferredDept}"><br/><li>#{temp}</li></ui:repeat>
+</ul>
+Employee ref code : #{employee.refcode}<br/>
+Employee Comments : #{employee.comment}<br/>
+</h:body>
+</html>
